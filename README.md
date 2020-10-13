@@ -19,17 +19,23 @@ Em caso de problemas abra uma [issue](https://github.com/stone-payments/sdk-ios-
 
 Antes de começar a usar o ContaStoneSDK é necessário seguir alguns procedimentos:
 
-1. [Baixe o arquivo zip](https://github.com/stone-co/conta-stone-sdk-sample-ios/releases/download/1.0.0/ContaStoneFrameworks.zip) com os frameworks necessários.
+1. [Baixe o arquivo zip](https://github.com/stone-co/conta-stone-sdk-sample-ios/releases/download/1.0.0/ContaStoneFrameworks-swift-5.3.zip) com os frameworks necessários.
+
 2. Extraia a pasta Frameworks no diretório raiz do projeto.
+
 3. No target do projeto acesse a guia `General` e em `Frameworks, Libraries, and Embedded Content` adicione os frameworks:
 	- ContaStoneSDK.framework
 	- CryptoSwift.framework
 	- JOSESwift.framework
 	- TinyConstraints.framework
 	- XCoordinator.framework
+
 4. Na guia `Build Settings`, em `Build Options`, selecione `NO` para a configuração `Enable Bitcode`.
+
 5. Na guia `Build Settings`, em `Runpath Search Paths`, adicione a entrada `@executable_path/Frameworks/ContaStoneSDK.framework/Frameworks/`.
+
 6. Logo abaixo em `Framework Search Paths`, adicione a entrada `$(PROJECT_DIR)/Frameworks/ContaStoneSDK.framework/Frameworks/` no modo recursivo.
+
 7. Em `Build Phases` adicione um novo script chamado "Sign" (Em Build Phases, clique sinal de "mais" e selecione New Run Script Phase).
 
 ```shell
