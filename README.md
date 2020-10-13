@@ -19,7 +19,7 @@ Em caso de problemas abra uma [issue](https://github.com/stone-co/conta-stone-sd
 
 Antes de começar a usar o ContaStoneSDK é necessário seguir alguns procedimentos:
 
-1. [Baixe o arquivo zip](https://github.com/stone-co/conta-stone-sdk-sample-ios/releases/download/1.0.0/ContaStoneFrameworks-swift-5.3.zip) com os frameworks necessários.
+1. [Baixe o arquivo zip](https://github.com/stone-co/conta-stone-sdk-sample-ios/releases/latest) no link com os frameworks necessários.
 
 2. Extraia a pasta Frameworks no diretório raiz do projeto.
 
