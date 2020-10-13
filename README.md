@@ -6,7 +6,7 @@ SDK de integração para iOS.
 
 ## Contato
 
-Em caso de problemas abra uma [issue](https://github.com/stone-payments/sdk-ios-v2/issues).
+Em caso de problemas abra uma [issue](https://github.com/stone-co/conta-stone-sdk-sample-ios/issues).
 
 ## Instalação
 
