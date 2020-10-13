@@ -151,3 +151,12 @@ class ViewController: UIViewController {
 	}
 }
 ```
+
+## Exemplo
+
+Antes de abrir o projeto de exemplo, é necessário executar o script de bootstrap.
+
+```shell
+./bootstrap
+open Sample.xcworkspace
+```
