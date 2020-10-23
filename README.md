@@ -131,6 +131,21 @@ class ViewController: UIViewController {
 }
 ```
 
+### Aprovador
+
+```swift
+	var approverCoordinator: ApproverCoordinator?
+
+	func showApprover() {
+        let coordiantor = ApproverCoordinator() { _ in
+            self.approverCoordinator = nil
+        }
+        present(coordiantor.rootViewController, animated: true, completion: nil)
+
+        approverCoordinator = coordiantor // Holds the instance
+	}
+```
+
 ### Requisições
 
 ```swift

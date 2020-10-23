@@ -15,6 +15,8 @@ struct BalanceResponse: Decodable {
 
 class AuthenticatedViewController: UIViewController {
 
+    private var approverCoordinator: ApproverCoordinator?
+
     private lazy var userLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 14, weight: .bold)
@@ -51,6 +53,15 @@ class AuthenticatedViewController: UIViewController {
         return button
     }()
 
+    private lazy var approverButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Aprovador", for: .normal)
+        button.setTitleColor(UIColor.blue, for: .normal)
+        button.addTarget(self, action: #selector(showApprover), for: .touchUpInside)
+        button.height(56)
+        return button
+    }()
+
     private lazy var logoutButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Sair", for: .normal)
@@ -71,6 +82,7 @@ class AuthenticatedViewController: UIViewController {
         stackView.addArrangedSubview(balanceLabel)
         stackView.addArrangedSubview(balanceButton)
         stackView.addArrangedSubview(selectAccountButton)
+        stackView.addArrangedSubview(approverButton)
         stackView.addArrangedSubview(logoutButton)
 
         view.addSubview(stackView)
@@ -110,6 +122,15 @@ class AuthenticatedViewController: UIViewController {
         ContaStone.selectAccount(checkKYC: true) { _ in
             self.updateUserInfo()
         }
+    }
+
+    @objc private func showApprover() {
+        let coordiantor = ApproverCoordinator() { _ in
+            self.approverCoordinator = nil
+        }
+        approverCoordinator = coordiantor
+
+        present(coordiantor.rootViewController, animated: true, completion: nil)
     }
 
     @objc private func logout() {

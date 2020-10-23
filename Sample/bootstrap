@@ -2,9 +2,10 @@
 
 curl -LO https://github.com/stone-co/conta-stone-sdk-sample-ios/releases/download/0.1.0/ContaStoneFrameworks-swift-5.3.zip
 
-unzip ContaStoneFrameworks-swift-5.3.zip
+rm -rf Frameworks/
 
-rm -rf ContaStoneFrameworks-swift-5.3.zip
-rm -rf __MACOSX
+unzip ContaStoneFrameworks-0.2.0-swift-5.3.zip
+
+rm -rf ContaStoneFrameworks-0.2.0-swift-5.3.zip
 
 pod install
