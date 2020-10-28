@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl -LO https://github.com/stone-co/conta-stone-sdk-sample-ios/releases/download/0.1.0/ContaStoneFrameworks-swift-5.3.zip
+curl -LO https://github.com/stone-co/conta-stone-sdk-sample-ios/releases/download/0.2.0/ContaStoneFrameworks-0.2.0-swift-5.3.zip
 
 rm -rf Frameworks/
 
